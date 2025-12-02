@@ -1,8 +1,42 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<header class="header">
+    <div class="container">
+        <h1 class="logo">Petcenter</h1>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="inicio">
+    <div class="container">
+        <h2>Bem-vindo ao Petcenter</h2>
+        <p>Cuidamos do seu pet com amor, carinho e profissionalismo. Tudo o que seu melhor amigo precisa está aqui!</p>
+        <a href="#servicos" class="btn">Conhecer Serviços</a>
+    </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="servicos">
+    <div class="container">
+        <h3>Nossos Serviços</h3>
+
+        <div class="service-grid">
+            <div class="service-box">
+                <h4>Banho & Tosa</h4>
+                <p>Higiene completa com profissionais especializados.</p>
+            </div>
+
+            <div class="service-box">
+                <h4>Consultas Veterinárias</h4>
+                <p>Profissionais capacitados para cuidar da saúde do seu pet.</p>
+            </div>
+
+            <div class="service-box">
+                <h4>Acessórios & Rações</h4>
+                <p>Os melhores produtos selecionados especialmente para seu pet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<link rel="stylesheet" href="~/css/home.css" />

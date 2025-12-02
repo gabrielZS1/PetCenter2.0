@@ -19,7 +19,8 @@ body {
     justify-content: center;
     width: 350px;
     margin-left: calc(50% - 175px);
-    margin-bottom: -7px;
+    margin-top: 1vw;
+    margin-bottom:5vw;
     
 }
 
@@ -88,8 +89,4 @@ body {
 .lbl {
     text-align: center;
     color: #004bb5;
-}
-
-footer {
-    background-color: #fff;
 }

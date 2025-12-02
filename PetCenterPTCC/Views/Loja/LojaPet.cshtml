@@ -1,5 +1,65 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<link rel="stylesheet" href="~/css/loja.css" />
+
+<header>
+    <div class="logo">
+        <h1>PetShop Aconchego 🐾</h1>
+    </div>
+    <div class="carrinho">
+        🛒 Carrinho (0)
+    </div>
+</header>
+
+<main>
+    <section class="banner">
+        <h2>Tudo para o seu melhor amigo!</h2>
+        <p>Rações, acessórios e muito amor em um só lugar.</p>
+        <a href="#produtos" class="btn">Compre Agora</a>
+    </section>
+
+    <section id="produtos" class="container">
+        <h2>✨ Nossos Produtos</h2>
+        <div class="grid-produtos">
+            <div class="produto-card">
+                <div class="produto-img">
+                    [Imagem de Ração Premium para Cachorros]
+                </div>
+                <h3>Ração Super Premium</h3>
+                <p class="descricao">Sabor carne, alta digestibilidade.</p>
+                <p class="preco">R$ 159,90</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto-img">
+                    [Imagem de Arranhador de Gato]
+                </div>
+                <h3>Arranhador Luxo</h3>
+                <p class="descricao">Para gatos que amam afiar as garras.</p>
+                <p class="preco">R$ 99,90</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="produto-card">
+                <div class="produto-img">
+                    [Imagem de Brinquedo de Pelúcia para Cães]
+                </div>
+                <h3>Brinquedo de Pelúcia</h3>
+                <p class="descricao">Super resistente e divertido.</p>
+                <p class="preco">R$ 29,90</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="servicos-section">
+        <h2>🛁 Nossos Serviços</h2>
+        <div class="servicos-list">
+            <ul>
+                <li>Banho e Tosa</li>
+                <li>Consultas Veterinárias</li>
+                <li>Hospedagem Pet</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
