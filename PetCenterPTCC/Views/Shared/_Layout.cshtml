@@ -24,19 +24,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Menu</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" asp-controller="Pet" asp-action="CadastrarPet">Cadastrar Pet</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Loja" asp-action="LojaPet">Loja</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Servicos" asp-action="NossosServicos">Serviços</a>
+                            <a class="nav-link" asp-controller="Agenda" asp-action="NossaAgenda">Agendar</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Agenda" asp-action="NossaAgenda"></a>
+                            <a class="nav-link" asp-controller="Cliente" asp-action="LoginCliente">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -50,11 +47,13 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer>
         <div class="containerr">
-            &copy; 2025 - PetCenter - <a asp-area="" asp-controller="Home" asp-action="Privacy">Fale conosco</a>
+            &copy; 2025 - PetCenter - <a asp-area="" asp-controller="FaleConosco" asp-action="faleConosco">Fale conosco</a>
         </div>
     </footer>
+    
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

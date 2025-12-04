@@ -1,0 +1,214 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+
+body {
+    background-image: url('/images/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.form-wrapper {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    max-width: 400px;
+    width: 100%;
+    margin: 2vw auto; /* centraliza horizontalmente */
+}
+
+
+.styled-form h1 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #333333;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1.8px solid #d1d9e6;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    outline-offset: 2px;
+    outline-color: transparent;
+    font-weight: 400;
+    color: #444444;
+}
+
+    .input:focus {
+        border-color: #005fcc;
+        outline-color: #005fcc;
+        box-shadow: 0 0 8px rgba(0, 95, 204, 0.3);
+    }
+
+.button {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #ff6a00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+}
+
+    .button:hover {
+        background-color: #e05d00;
+    }
+
+.buttonn {
+    width: 100%;
+    padding: 12px 8vw;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #ff6a00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+}
+
+    .buttonn:hover {
+        background-color: #e05d00;
+    }
+
+
+.mensagem {
+    margin-top: 25px;
+    padding: 14px 20px;
+    background-color: #e9f5ff;
+    border: 1.5px solid #005fcc;
+    color: #004bb5;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 95, 204, 0.1);
+    user-select: none;
+}
+
+.lbl {
+    text-align: center;
+    color: #004bb5;
+}
+
+
+.form-columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px; /* espaço entre colunas */
+    margin-bottom: 20px;
+}
+
+.coluna-esquerda,
+.coluna-direita {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 25px;
+}
+
+.linha-divisoria {
+    width: 32px;
+    background-color: #004bb5;
+    border-radius: 2px;
+}
+
+/* Form-wrapper menor, mas ainda confortável */
+.form-wrapper {
+    max-width: 360px; /* leve redução do original (400px) */
+    padding: 32px 28px; /* menor que 40/30, mas ainda espaçoso */
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+    margin: 2vw auto;
+}
+
+/* Inputs e botões ajustados proporcionalmente */
+.input {
+    padding: 12px 14px;
+    font-size: 1rem;
+}
+
+.button,
+.buttonn {
+    padding: 12px 0;
+    font-size: 1.05rem;
+}
+
+/* Título do formulário */
+.styled-form h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+/* ---------------- Responsividade ---------------- */
+
+/* Telas médias */
+@media (max-width: 900px) {
+    .form-wrapper {
+        max-width: 340px;
+        padding: 28px 24px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .form-wrapper {
+        max-width: 320px;
+        padding: 25px 20px;
+    }
+
+    .input {
+        padding: 11px 12px;
+    }
+
+    .button,
+    .buttonn {
+        padding: 11px 0;
+        font-size: 1rem;
+    }
+
+    .styled-form h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 400px) {
+    .form-wrapper {
+        max-width: 300px;
+        padding: 20px 16px;
+    }
+
+    .input {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .button,
+    .buttonn {
+        padding: 10px 0;
+        font-size: 0.95rem;
+    }
+
+    .styled-form h1 {
+        font-size: 1.4rem;
+    }
+}

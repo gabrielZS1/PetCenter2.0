@@ -1,11 +1,11 @@
 ﻿<link rel="stylesheet" href="~/css/loja.css" />
 
-<header>
+<header class="heed">
     <div class="logo">
-        <h1>PetShop Aconchego 🐾</h1>
+        <h1>Loja PetCenter 🐾</h1>
     </div>
     <div class="carrinho">
-        🛒 Carrinho (0)
+        🛒 Carrinho (<span id="contador-carrinho">0</span>)
     </div>
 </header>
 
@@ -16,50 +16,113 @@
         <a href="#produtos" class="btn">Compre Agora</a>
     </section>
 
+    <section id="ofertas" class="container destaque-section">
+        <h2>🔥 Ofertas Imperdíveis da Semana!</h2>
+        <div class="grid-produtos">
+            <div class="produto-card oferta">
+                <div class="produto-img">
+                    <img src="~/images/comedouro.jpg"/>
+                </div>
+                <h3>Comedouro Duplo Ergonômico</h3>
+                <p class="descricao">Ideal para água e ração. Antiderrapante.</p>
+                <p class="preco-antigo">De R$ 49,90</p>
+                <p class="preco preco-oferta">R$ 34,90</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
     <section id="produtos" class="container">
         <h2>✨ Nossos Produtos</h2>
+
+        <div class="controles-produtos">
+            <input type="text" placeholder="Buscar produto..." class="barra-busca">
+            <select class="filtro-categoria">
+                <option value="">Todas as Categorias</option>
+                <option value="caes">Cães</option>
+                <option value="gatos">Gatos</option>
+                <option value="higiene">Higiene</option>
+                <option value="brinquedos">Brinquedos</option>
+            </select>
+        </div>
+
         <div class="grid-produtos">
-            <div class="produto-card">
+            <div class="produto-card" data-categoria="caes">
                 <div class="produto-img">
-                    [Imagem de Ração Premium para Cachorros]
+                    <img src="~/images/ração.jpg"/>
                 </div>
                 <h3>Ração Super Premium</h3>
                 <p class="descricao">Sabor carne, alta digestibilidade.</p>
+                <div class="rating">⭐⭐⭐⭐⭐ (25)</div>
                 <p class="preco">R$ 159,90</p>
                 <button class="btn-adicionar">Adicionar ao Carrinho</button>
             </div>
 
-            <div class="produto-card">
+            <div class="produto-card" data-categoria="gatos">
                 <div class="produto-img">
-                    [Imagem de Arranhador de Gato]
+                    <img src="~/images/arranhar.jpg" />
                 </div>
                 <h3>Arranhador Luxo</h3>
                 <p class="descricao">Para gatos que amam afiar as garras.</p>
+                <div class="rating">⭐⭐⭐⭐ (12)</div>
                 <p class="preco">R$ 99,90</p>
                 <button class="btn-adicionar">Adicionar ao Carrinho</button>
             </div>
 
-            <div class="produto-card">
+            <div class="produto-card" data-categoria="caes brinquedos">
                 <div class="produto-img">
-                    [Imagem de Brinquedo de Pelúcia para Cães]
+                    <img src="~/images/ursinho.jpg" />
                 </div>
                 <h3>Brinquedo de Pelúcia</h3>
                 <p class="descricao">Super resistente e divertido.</p>
+                <div class="rating">⭐⭐⭐⭐⭐ (40)</div>
                 <p class="preco">R$ 29,90</p>
                 <button class="btn-adicionar">Adicionar ao Carrinho</button>
             </div>
+
+            <div class="produto-card" data-categoria="gatos higiene">
+                <div class="produto-img">
+                    <img src="~/images/Areia-Higienica.jpg" />
+                </div>
+                <h3>Areia Higiênica Granulado</h3>
+                <p class="descricao">Super absorvente e sem odor.</p>
+                <div class="rating">⭐⭐⭐⭐ (15)</div>
+                <p class="preco">R$ 45,00</p>
+                <button class="btn-adicionar">Adicionar ao Carrinho</button>
+            </div>
+
         </div>
     </section>
 
     <section id="servicos" class="servicos-section">
-        <h2>🛁 Nossos Serviços</h2>
-        <div class="servicos-list">
-            <ul>
-                <li>Banho e Tosa</li>
-                <li>Consultas Veterinárias</li>
-                <li>Hospedagem Pet</li>
-            </ul>
+        <div class="container">
+            <h2>🛁 Nossos Serviços</h2>
+            <div class="servicos-list">
+                <ul>
+                    <li><span class="icone">🧼</span> Banho e Tosa (Agende seu horário!)</li>
+                    <li><span class="icone">🩺</span> Consultas Veterinárias (Profissionais qualificados)</li>
+                    <li><span class="icone">🏠</span> Hospedagem Pet (Conforto e segurança)</li>
+                </ul>
+                <a href="#" class="btn-agendamento">Agendar Serviço</a>
+            </div>
         </div>
     </section>
+
 </main>
 
+
+
+<script>
+    // Apenas um exemplo de como você pode adicionar funcionalidade com JavaScript
+    const btnAdicionar = document.querySelectorAll('.btn-adicionar');
+    const contadorCarrinho = document.getElementById('contador-carrinho');
+    let totalCarrinho = 0;
+
+    btnAdicionar.forEach(btn => {
+        btn.addEventListener('click', () => {
+            totalCarrinho++;
+            contadorCarrinho.textContent = totalCarrinho;
+            alert('Produto adicionado ao carrinho!');
+        });
+    });
+</script>

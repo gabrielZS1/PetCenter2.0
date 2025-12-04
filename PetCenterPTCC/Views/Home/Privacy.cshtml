@@ -1,7 +1,40 @@
-﻿@{
-    ViewData["Title"] = "Fale conosco";
-}
+﻿<link rel="stylesheet" href="~/css/contato.css" />
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco - PetShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Fale Conosco</h1>
+    </header>
 
-<h1>@ViewData["Title"]</h1>
+    <main class="container">
+        <h2>Adoramos ouvir você e seus pets! 🐶</h2>
 
+        <div class="contact-info">
+            <a href="https://wa.me/SEUNUMERO" target="_blank" class="contact-card whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <h3>WhatsApp</h3>
+                <p>Mande uma mensagem e fale conosco rapidinho!</p>
+                <span class="detail-text">(SEU NÚMERO AQUI)</span>
+            </a>
+
+            <a href="mailto:SEUEMAIL@dominio.com" class="contact-card email">
+                <i class="fas fa-envelope"></i>
+                <h3>E-mail</h3>
+                <p>Prefere escrever? Envie-nos um e-mail.</p>
+                <span class="detail-text">(SEU EMAIL AQUI)</span>
+            </a>
+        </div>
+
+        <p class="note">Nosso horário de atendimento é de Segunda a Sexta, das 9h às 18h.</p>
+    </main>
+
+</body>
+</html>

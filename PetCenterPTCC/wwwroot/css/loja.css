@@ -1,213 +1,385 @@
-﻿/* ============================== */
-/*     AJUSTE PARA NAVBAR ASP.NET */
-/* ============================== */
+﻿/* =============================== */
+/* 1. VARIÁVEIS E ESTILOS GERAIS  */
+/* =============================== */
 
-
-
-/* ============================== */
-/*           HEADER               */
-/* ============================== */
-
-
-
-.logo h1 {
-    font-size: 26px;
-    color: #e57a00;
+:root {
+    --cor-principal: #FF9900; /* Laranja Vibrante - Cor de Destaque */
+    --cor-secundaria: #FFCC66; /* Laranja Claro/Pêssego - Para fundos suaves */
+    --cor-fundo: #FFFFFF; /* Fundo Branco Limpo */
+    --cor-texto-escuro: #333333; /* Texto Principal */
+    --cor-texto-claro: #FFFFFF;
+    --sombra-card: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --sombra-hover: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.carrinho {
-    font-size: 18px;
-    cursor: pointer;
-    transition: 0.3s;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-    .carrinho:hover {
-        color: #ff8a00;
-    }
-
-/* ============================== */
-/*            BANNER              */
-/* ============================== */
-
-.banner {
-    background: linear-gradient(to right, #ff8a00cc, #ffc800cc), url("https://images.unsplash.com/photo-1612832020724-5b1970fbbbc5?q=80&w=1600&auto=format");
-    background-size: cover;
-    background-position: center;
-    padding: 120px 20px;
-    text-align: center;
-    color: #fff;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
 }
-
-    .banner h2 {
-        font-size: 40px;
-        margin-bottom: 10px;
-    }
-
-    .banner p {
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-
-.btn {
-    display: inline-block;
-    padding: 12px 26px;
-    background: #fff;
-    color: #e57a00;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: 0.3s;
-}
-
-    .btn:hover {
-        background: #e57a00;
-        color: #fff;
-    }
-
-/* ============================== */
-/*           PRODUTOS             */
-/* ============================== */
 
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 50px auto;
+    margin: 0 auto;
+    padding: 40px 0;
 }
 
-    .container h2 {
-        text-align: center;
-        font-size: 32px;
-        margin-bottom: 30px;
-        color: #e57a00;
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--cor-principal); /* Títulos em Laranja */
+    font-size: 2.2em;
+}
+
+/* Estilo padrão para botões de ação */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--cor-principal); /* Botões Principais em Laranja */
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn:hover {
+        background-color: #CC7A00; /* Laranja mais escuro no hover */
+        transform: translateY(-2px);
     }
+
+
+/* =============================== */
+/* 2. HEADER E NAVEGAÇÃO           */
+/* =============================== */
+
+.heed {
+    background-color: var(--cor-fundo); /* Fundo Branco */
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 {
+    color: var(--cor-principal); /* Logo em Laranja */
+    font-size: 1.8em;
+}
+
+.carrinho {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--cor-principal); /* Carrinho em Laranja */
+    cursor: pointer;
+    padding: 8px 15px;
+    border: 1px solid var(--cor-principal);
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+    .carrinho:hover {
+        background-color: var(--cor-secundaria);
+    }
+
+
+/* =============================== */
+/* 3. BANNER PRINCIPAL             */
+/* =============================== */
+
+.banner {
+    background: linear-gradient(to right, #ff8a00cc, #ffc800cc), url(../images/banner03.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    color: var(--branco);
+}
+
+    .banner h2 {
+        color: var(--cor-texto-claro); /* Texto do banner continua branco */
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+    .banner p {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+        color: #fff;
+    }
+
+
+/* =============================== */
+/* 4. SEÇÃO PRODUTOS (GRID)        */
+/* =============================== */
+
+.controles-produtos {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.barra-busca, .filtro-categoria {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 300px;
+}
 
 .grid-produtos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
 }
 
 .produto-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    background-color: var(--cor-fundo); /* Fundo Branco */
+    border-radius: 10px;
+    box-shadow: var(--sombra-card);
+    overflow: hidden;
     text-align: center;
-    transition: 0.3s;
+    padding: 20px;
+    transition: all 0.3s ease;
 }
 
     .produto-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        box-shadow: var(--sombra-hover);
+        transform: translateY(-5px);
     }
 
 .produto-img {
-    background: #f0f0f0;
-    height: 180px;
-    border-radius: 12px;
+    height: 350px;
+    background-color: var(--cor-secundaria);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #777;
     margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden; /* IMPORTANTE — impede imagem de escapar do bloco */
+}
+
+    .produto-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* A imagem preenche de forma elegante */
+        border-radius: 8px;
+    }
+
+.produto-card h3 {
+    color: var(--cor-texto-escuro);
+    margin: 10px 0 5px;
+    font-size: 1.3em;
 }
 
 .descricao {
-    font-size: 14px;
     color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #FFC107; /* Amarelo Estrela (mantido para avaliações) */
+    font-size: 0.9em;
+    margin-bottom: 10px;
 }
 
 .preco {
-    font-size: 22px;
-    color: #e57a00;
+    font-size: 1.5em;
+    color: var(--cor-principal); /* Preço em Laranja */
     font-weight: bold;
-    margin: 10px 0;
+    margin-bottom: 15px;
+}
+
+/* Estilo para Oferta */
+.preco-antigo {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 1em;
+    margin: 0;
+}
+
+.preco-oferta {
+    color: #008000; /* Verde escuro (mantido para destacar o desconto) */
 }
 
 .btn-adicionar {
-    width: 100%;
-    padding: 12px;
-    background: #ff8a00;
+    padding: 10px 20px;
+    background-color: var(--cor-principal); /* Botão de adicionar em Laranja */
+    color: var(--cor-texto-claro);
     border: none;
-    color: #fff;
-    font-weight: bold;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 8px;
-    transition: 0.3s;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
     .btn-adicionar:hover {
-        background: #e57a00;
+        background-color: #CC7A00;
     }
 
-/* ============================== */
-/*           SERVIÇOS             */
-/* ============================== */
+
+/* =============================== */
+/* 5. SEÇÃO SERVIÇOS               */
+/* =============================== */
 
 .servicos-section {
-    background: #fff;
-    padding: 50px 20px;
-    margin-top: 50px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 1200px;
-    margin: 50px auto;
+    background-color: var(--cor-secundaria); /* Fundo Laranja Claro */
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid var(--cor-principal);
 }
 
     .servicos-section h2 {
-        text-align: center;
-        font-size: 30px;
-        color: #e57a00;
-        margin-bottom: 25px;
+        color: var(--cor-texto-escuro);
     }
 
 .servicos-list ul {
     list-style: none;
-    max-width: 400px;
-    margin: auto;
     padding: 0;
+    margin-bottom: 30px;
 }
 
 .servicos-list li {
-    background: #f0f0f0;
-    padding: 12px;
-    border-radius: 8px;
-    margin: 10px 0;
-    text-align: center;
-    transition: 0.3s;
-    font-size: 18px;
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: var(--cor-texto-escuro);
 }
 
-    .servicos-list li:hover {
-        background: #ff8a00;
-        color: #fff;
+.servicos-list .icone {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: var(--cor-principal); /* Ícones em Laranja */
+}
+
+.btn-agendamento {
+    background-color: var(--cor-principal); /* Botão de Agendamento em Laranja */
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+    .btn-agendamento:hover {
+        background-color: #CC7A00;
     }
 
-/* ============================== */
-/*        RESPONSIVIDADE          */
-/* ============================== */
 
-@media (max-width: 600px) {
+/* =============================== */
+/* 6. RODAPÉ (FOOTER)              */
+/* =============================== */
 
-    header {
+footer {
+    background-color: var(--cor-texto-escuro); /* Rodapé Escuro (Contraste) */
+    color: #CCC;
+    padding: 40px 0 20px;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.col-footer {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
+    .col-footer h4 {
+        color: var(--cor-principal); /* Títulos do Rodapé em Laranja */
+        margin-bottom: 15px;
+        font-size: 1.2em;
+    }
+
+    .col-footer ul {
+        list-style: none;
+    }
+
+        .col-footer ul li a {
+            color: #CCC;
+            text-decoration: none;
+            line-height: 2;
+            transition: color 0.3s;
+        }
+
+            .col-footer ul li a:hover {
+                color: var(--cor-principal); /* Hover em Laranja */
+            }
+
+.social-icons a {
+    color: var(--cor-principal); /* Ícones Sociais em Laranja */
+    margin-right: 10px;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+
+/* ---------------- Responsividade ---------------- */
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 60px 20px;
+    }
+
+        .banner h2 {
+            font-size: 2.2em;
+        }
+
+        .banner p {
+            font-size: 1.2em;
+        }
+
+    .grid-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .controles-produtos {
         flex-direction: column;
-        text-align: center;
         gap: 10px;
     }
 
-    .banner h2 {
-        font-size: 30px;
+    .barra-busca, .filtro-categoria {
+        max-width: 100%;
     }
 
-    .banner {
-        padding: 80px 20px;
+    .container-footer {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .produto-img {
-        height: 150px;
+    .col-footer {
+        text-align: center;
+        max-width: 100%;
     }
 }

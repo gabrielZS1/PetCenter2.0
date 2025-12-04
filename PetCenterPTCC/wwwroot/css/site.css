@@ -18,7 +18,7 @@ html {
 }
 
 body {
-    margin-bottom: 60px;
+   
 }
 
 .form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
@@ -47,6 +47,7 @@ body {
     top: 0;
     position: sticky;
     z-index: 1000;
+    
 }
 
 .custom-nav .navbar-brand {
@@ -55,7 +56,13 @@ body {
     font-weight: bold;
     font-size: 1.5em;
     transition: color 0.3s;
-    margin-left:75px
+    margin-left:68px;
+}
+
+@media (max-width: 900px) {
+    .custom-nav .navbar-brand {
+        margin-left: 15px;
+    }
 }
 
 .custom-nav .navbar-brand:hover {
@@ -77,12 +84,11 @@ body {
     color: var(--secondary-white) !important;
 }
 
-
 :root {
-    --primary-orange: #ff8c00; 
+    --primary-orange: #ff8c00;
     --secondary-white: #ffffff;
     --dark-footer: #333333;
-    --link-color: #ffaa40; 
+    --link-color: #ffaa40;
 }
 
 
@@ -95,18 +101,19 @@ body {
     border-top: none !important;
 }
 
-.footer .containerr {
-    text-align: center;
-}
+    .footer .containerr {
+        text-align: center;
+        margin-top: -10px;
+    }
 
-.footer a {
-    color: var(--link-color) !important;
-    text-decoration: none;
-    transition: color 0.3s;
-    font-weight: 500;
-}
+    .footer a {
+        color: var(--link-color) !important;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-weight: 500;
+    }
 
- .footer a:hover {
-    color: var(--secondary-white) !important;
-    text-decoration: underline;
- }
+        .footer a:hover {
+            color: var(--secondary-white) !important;
+            text-decoration: underline;
+        }

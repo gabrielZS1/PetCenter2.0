@@ -1,5 +1,33 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Cadastrar Usuário";
 }
+
+<div class="form-wrapper">
+     <form method="POST" class="styled-form">
+
+         <h1>Cadastrar Usuário</h1>
+
+         <div class="form-columns">
+
+             <div class="coluna-esquerda">
+                 <input id="nome" class="input" placeholder="Nome" name="nome" type="text" required />
+                 <input id="cpf" class="input" placeholder="CPF" name="cpf" type="text" required />
+                 <input id="telefone" class="input" placeholder="Telefone" name="telefone" type="text" required />
+             </div>
+
+             <div class="linha-divisoria"></div>
+
+             <div class="coluna-direita">
+                 <input id="email" class="input" placeholder="Email" name="email" type="email" required />
+                 <input id="senha1" class="input" placeholder="Senha" name="senha1" type="password" required />
+                 <input id="senha2" class="input" placeholder="Confirmar senha" name="senha2" type="password" required />
+             </div>
+
+         </div>
+
+         <button class="button" type="submit">Cadastrar</button>
+
+     </form>
+</div>
+
+<link rel="stylesheet" href="~/css/cadastrarUsuario.css" />

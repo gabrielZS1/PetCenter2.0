@@ -1,0 +1,77 @@
+﻿<link rel="stylesheet" href="~/css/agendar.css" />
+
+<div class="agendar-page">
+    <div class="container">
+        <div class="header">
+            <h1>🐶 Agendamento PetCenter</h1>
+            <p>Seu pet merece o melhor cuidado. Agende agora!</p>
+        </div>
+
+        <form action="#" method="POST" class="agendamento-form">
+
+            <h2>1. Seus Dados e Pet</h2>
+
+            <div class="form-group">
+                <label for="email">E-mail do Cliente</label>
+                <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pet_name">Tipo de Pet</label>
+                <select id="pet_name" name="pet_name" required>
+                    <option value="" disabled selected>Selecione um Pet</option>
+                    <option value="Cachorro">Cachorro </option>
+                    <option value="Gato">Gato</option>
+                    <option value="Coelho">Coelho</option>
+                    <option value="Outros...">Outros...</option>
+                </select>
+            </div>
+
+            <div class="link-cadastro">
+                <p>Ainda não temos o cadastro do seu pet?</p>
+                <a asp-controller="Pet" asp-action="CadastrarPet">Adicionar cadastro</a>
+            </div>
+
+
+            <h2>2. Escolha o Serviço</h2>
+
+            <div class="form-group service-options">
+                <input type="radio" id="tosa" name="service" value="tosa" required>
+                <label for="tosa">Tosa</label>
+
+                <input type="radio" id="banho" name="service" value="banho">
+                <label for="banho">Banho</label>
+
+                <input type="radio" id="consulta" name="service" value="consulta_medica">
+                <label for="consulta">Consulta Médica</label>
+            </div>
+
+            <h2>3. Data e Horário</h2>
+
+            <div class="form-group">
+                <label for="date">Data Desejada</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Horário</label>
+                <select id="time" name="time" required>
+                    <option value="" disabled selected>Selecione o Horário</option>
+                    <option value="09:00">09:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="16:00">16:00</option>
+                </select>
+            </div>
+
+            <h2>4. Observações (Opcional)</h2>
+            <div class="form-group">
+                <label for="notes">Detalhes Adicionais</label>
+                <textarea id="notes" name="notes" rows="3" placeholder="Ex: Por favor, usar o xampu antialérgico..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">AGENDAR AGORA</button>
+
+        </form>
+    </div>
+</div>

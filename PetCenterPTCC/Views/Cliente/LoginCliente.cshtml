@@ -1,5 +1,25 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Login";
 }
+<div class="center-container">
+<div class="form-wrapper">
+    <form method="POST" class="styled-form">
+
+        <h1>Login</h1>
+
+        <input id="nome" class="input" placeholder="Nome" name="nome" type="text" required />
+        <input id="email" class="input" placeholder="Email" name="email" type="email" required />
+        <input id="senha1" class="input" placeholder="Senha" name="senha1" type="password" required />
+
+        <a class="button" asp-controller="Home" asp-action="Index">
+            Login
+        </a>
+
+        <p class="cadastre">
+            Não possui conta? <a asp-controller="Cliente" asp-action="CadastroCliente">Cadastre-se</a>
+        </p>
+
+    </form>
+</div>
+</div>
+<link rel="stylesheet" href="~/css/login.css" />
